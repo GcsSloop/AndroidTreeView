@@ -1,0 +1,56 @@
+原理： ListView Item + panndingLeft(level) + expend include
+
+将系统中的数据Bean(源数据) 转换为 Node(节点)
+
+反射+注解
+注解帮助定位
+反射帮助取值
+
+
+实现过程：
+1.将用户数据转化为node节点
+2.设置节点之间的关联关系
+3.排序
+4.过滤需要显示的数据
+
+
+涉及到的知识：
+1.树形结构的数据组织
+2.数据结构的进一步加强
+3.反射+注解的使用（注解可以使用命名规范替代--可以提高一点效率）
+4.封装与设计adapter
+	尽量减少对用户暴露的api
+	只暴露简单的接口
+
+
+功能扩展
+@Target(ElementType.FIELD)
+@Retention(RetentionPolicy.RUNTIME)
+public @interface TreeNodeId {
+	Class type();
+}
+
+@TreeNodeId(type = integer.class)
+private int id;
+
+通过注解强制用户指定数据类型
+然后在通过反射获取数据的时候就可以根据用户指定的数据类型进行强制转换了
+	
+//遍历所有字段(属性)并根据注解判断方法
+Field[] fields = clazz.getDeclaredFields();
+for (Field field : fields) {
+	if(field.getAnnotation(TreeNodeId.class) != null){
+		field.setAccessible(true);	//设置访问权限 强制更改为可以访问
+		TreeNodeId annotation = field.getAnnotation(TreeNodeId.class);
+		Class type = annotation.type();
+		if (type==String.class) {
+			//强转为String
+		id = (String)field.get(t);
+		}else if (type == Integer.class) {
+			//强转为int
+		id = field.getInt(t);
+		}			
+	}
+}
+
+				
