@@ -5,7 +5,7 @@
  * Copyright: Copyright (c) 2015
  * 
  * @author sloop
- * @date 2015Äê2ÔÂ21ÈÕ ÉÏÎç3:19:27
+ * @date 2015å¹´2æœˆ21æ—¥ ä¸Šåˆ3:19:27
  * @version V1.0
  */
 
@@ -23,21 +23,21 @@ import com.sloop.treeview.utils.annotation.TreeNodeLabel;
 import com.sloop.treeview.utils.annotation.TreeNodePid;
 
 /**
- * Ê÷ĞÎ½á¹¹µÄ°ïÖúÀà ½«ÔªÊı¾İ×ª»»Îª½Úµã
+ * æ ‘å½¢ç»“æ„çš„å¸®åŠ©ç±» å°†å…ƒæ•°æ®è½¬æ¢ä¸ºèŠ‚ç‚¹
  * @ClassName: TreeHelper
  * @Description: 
  * @author sloop
- * @date 2015Äê2ÔÂ21ÈÕ ÉÏÎç3:19:27
+ * @date 2015å¹´2æœˆ21æ—¥ ä¸Šåˆ3:19:27
  *
  */
 
 public class TreeHelper {
 
 	/**
-	 * ½«ÓÃ»§Êı¾İ×ª»¯ÎªÊ÷ĞÎÊı¾İ
+	 * å°†ç”¨æˆ·æ•°æ®è½¬åŒ–ä¸ºæ ‘å½¢æ•°æ®
 	 * @Title: convertDatas2Nodes
 	 * @param datas
-	 * @return List<Node>	NodeÊı¾İ¼¯
+	 * @return List<Node>	Nodeæ•°æ®é›†
 	 * @throws IllegalArgumentException 
 	 * @throws IllegalAccessException 
 	 */
@@ -45,27 +45,27 @@ public class TreeHelper {
 		
 		List<Node> nodes = new ArrayList<Node>();
 		Node node = null;
-		for (T t : datas) {		//Ñ­»·±éÀúËùÓĞÊı¾İ
+		for (T t : datas) {		//å¾ªç¯éå†æ‰€æœ‰æ•°æ®
 			int id = -1;
 			int pId = -1;
 			String label = null;
 			
-			Class clazz = t.getClass();	//Ê¹ÓÃ·´Éä+×¢½â»ñÈ¡ÊôĞÔºÍ·½·¨
+			Class clazz = t.getClass();	//ä½¿ç”¨åå°„+æ³¨è§£è·å–å±æ€§å’Œæ–¹æ³•
 			
-			//±éÀúËùÓĞ×Ö¶Î(ÊôĞÔ)²¢¸ù¾İ×¢½âÅĞ¶Ï·½·¨
+			//éå†æ‰€æœ‰å­—æ®µ(å±æ€§)å¹¶æ ¹æ®æ³¨è§£åˆ¤æ–­æ–¹æ³•
 			Field[] fields = clazz.getDeclaredFields();
 			for (Field field : fields) {
 				if(field.getAnnotation(TreeNodeId.class) != null){
-					//À©Õ¹-Í¨¹ıÓÃ»§Ö¸¶¨ÀàĞÍÀ´Ç¿ÖÆ×ª»»µ½¸ÃÀàĞÍ
+					//æ‰©å±•-é€šè¿‡ç”¨æˆ·æŒ‡å®šç±»å‹æ¥å¼ºåˆ¶è½¬æ¢åˆ°è¯¥ç±»å‹
 			/*		TreeNodeId annotation = field.getAnnotation(TreeNodeId.class);
 					Class type = annotation.type();
 					if (type==String.class) {
-						//Ç¿×ªÎªString
+						//å¼ºè½¬ä¸ºString
 					}else if (type == Integer.class) {
-						//Ç¿×ªÎªint
+						//å¼ºè½¬ä¸ºint
 					}*/
 					
-					field.setAccessible(true);	//ÉèÖÃ·ÃÎÊÈ¨ÏŞ Ç¿ÖÆ¸ü¸ÄÎª¿ÉÒÔ·ÃÎÊ
+					field.setAccessible(true);	//è®¾ç½®è®¿é—®æƒé™ å¼ºåˆ¶æ›´æ”¹ä¸ºå¯ä»¥è®¿é—®
 					id = field.getInt(t);
 				}
 				if(field.getAnnotation(TreeNodePid.class) != null){
@@ -80,13 +80,13 @@ public class TreeHelper {
 			node = new Node(id, pId, label);
 			nodes.add(node);
 		}
-		//ÎªnodeÉèÖÃ¹ØÁª¹ØÏµ
+		//ä¸ºnodeè®¾ç½®å…³è”å…³ç³»
 	/*	for (Node n : nodes){
 			for (Node m : nodes) {
-				if (m.getpId() == n.getId()) {			//mÊÇnµÄ×Ó½Úµã
+				if (m.getpId() == n.getId()) {			//mæ˜¯nçš„å­èŠ‚ç‚¹
 					n.getChildren().add(m);
 					m.setParent(n);
-				}else if (m.getId() == n.getpId()) {	//mÊÇnµÄ¸¸½Úµã
+				}else if (m.getId() == n.getpId()) {	//mæ˜¯nçš„çˆ¶èŠ‚ç‚¹
 					m.getChildren().add(n);
 					n.setParent(m);
 				}
@@ -96,10 +96,10 @@ public class TreeHelper {
 			Node n = nodes.get(i);
 			for (int j = i+1; j < nodes.size(); j++) {
 				Node m = nodes.get(j);
-				if (m.getpId() == n.getId()) {			//mÊÇnµÄ×Ó½Úµã
+				if (m.getpId() == n.getId()) {			//mæ˜¯nçš„å­èŠ‚ç‚¹
 					n.getChildren().add(m);
 					m.setParent(n);
-				}else if (m.getId() == n.getpId()) {	//mÊÇnµÄ¸¸½Úµã
+				}else if (m.getId() == n.getpId()) {	//mæ˜¯nçš„çˆ¶èŠ‚ç‚¹
 					m.getChildren().add(n);
 					n.setParent(m);
 				}
@@ -114,7 +114,7 @@ public class TreeHelper {
 	}
 
 	/**
-	 * »ñÈ¡ÅÅĞòºóµÄ½ÚµãÊı¾İ
+	 * è·å–æ’åºåçš„èŠ‚ç‚¹æ•°æ®
 	 * @Title: getSortedNodes
 	 * @param datas
 	 * @return List<Node>
@@ -123,38 +123,38 @@ public class TreeHelper {
 	 */
 	public static <T> List<Node> getSortedNodes(List<T> datas, int defaultExpandLevel) throws IllegalAccessException, IllegalArgumentException {
 		
-		List<Node> result = new ArrayList<Node>();		//ÅÅĞòÍê³ÉµÄ½Úµã
-		List<Node> nodes = convertDatas2Nodes(datas);	//×ª»¯ºóµÄËùÓĞ½Úµã
+		List<Node> result = new ArrayList<Node>();		//æ’åºå®Œæˆçš„èŠ‚ç‚¹
+		List<Node> nodes = convertDatas2Nodes(datas);	//è½¬åŒ–åçš„æ‰€æœ‰èŠ‚ç‚¹
 		List<Node> rootNodes = getRootNodes(nodes);
-		Log.e("TAG", "×ª»¯ºóµÄËùÓĞ½Úµã¸öÊı"+nodes.size());
-		Log.e("TAG", "¸ù½Úµã¸öÊı"+rootNodes.size());
+		Log.e("TAG", "è½¬åŒ–åçš„æ‰€æœ‰èŠ‚ç‚¹ä¸ªæ•°"+nodes.size());
+		Log.e("TAG", "æ ¹èŠ‚ç‚¹ä¸ªæ•°"+rootNodes.size());
 		for (Node node : rootNodes) {
-	//		Log.e("TAG", "¸ù½Úµã--"+node.getName());
+	//		Log.e("TAG", "æ ¹èŠ‚ç‚¹--"+node.getName());
 			addNode(result, node, defaultExpandLevel, 1);
 		}
-		Log.e("TAG", "ÅÅĞòÍê³ÉµÄ½Úµã¸öÊı"+result.size());
+		Log.e("TAG", "æ’åºå®Œæˆçš„èŠ‚ç‚¹ä¸ªæ•°"+result.size());
 		for (Node node : result) {
 			
-		//	Log.e("TAG", "ÅÅĞò----"+node.getName());
+		//	Log.e("TAG", "æ’åº----"+node.getName());
 		}
 		return result;
 	}
 	
 	/**
-	 * °ÑÒ»¸ö½ÚµãµÄËùÓĞº¢×Ó½Úµã¶¼·ÅÈëresult(µİ¹é)
+	 * æŠŠä¸€ä¸ªèŠ‚ç‚¹çš„æ‰€æœ‰å­©å­èŠ‚ç‚¹éƒ½æ”¾å…¥result(é€’å½’)
 	 * @Title: addNode
-	 * @param result					Ìí¼Ó½øÄÄ¸ö¸¸½Úµã
-	 * @param node						ĞèÒªÌí¼Ó½øÈ¥µÄnode
-	 * @param defaultExpandLevel		Ä¬ÈÏÕ¹¿ª²ã¼¶
-	 * @param currentLevel				µ±Ç°²ã¼¶
+	 * @param result					æ·»åŠ è¿›å“ªä¸ªçˆ¶èŠ‚ç‚¹
+	 * @param node						éœ€è¦æ·»åŠ è¿›å»çš„node
+	 * @param defaultExpandLevel		é»˜è®¤å±•å¼€å±‚çº§
+	 * @param currentLevel				å½“å‰å±‚çº§
 	 */
 	private static void addNode(List<Node> result, Node node, int defaultExpandLevel, int currentLevel) {
 		
 		result.add(node);
-		if (node.isLeaf()){							//Èç¹ûÊÇÒ¶×Ó½ÚµãËµÃ÷¸Ã·ÖÖ§Ìí¼Ó½áÊø ·µ»Ø
+		if (node.isLeaf()){							//å¦‚æœæ˜¯å¶å­èŠ‚ç‚¹è¯´æ˜è¯¥åˆ†æ”¯æ·»åŠ ç»“æŸ è¿”å›
 			return;
 		}
-		if (defaultExpandLevel >= currentLevel) {	//µ±Ç°²ã¼¶Ğ¡ÓÚÄ¬ÈÏÕ¹¿ª²ã¼¶¾ÍÕ¹¿ªµ±Ç°
+		if (defaultExpandLevel >= currentLevel) {	//å½“å‰å±‚çº§å°äºé»˜è®¤å±•å¼€å±‚çº§å°±å±•å¼€å½“å‰
 			node.setExpend(true);
 		}
 
@@ -164,7 +164,7 @@ public class TreeHelper {
 	}
 	
 	/**
-	 * ¹ıÂË³öĞèÒªÏÔÊ¾µÄnode¼¯ºÏ
+	 * è¿‡æ»¤å‡ºéœ€è¦æ˜¾ç¤ºçš„nodeé›†åˆ
 	 * @Title: fliterVisibleNodes
 	 * @return List<Node>
 	 */
@@ -173,19 +173,19 @@ public class TreeHelper {
 		List<Node> result = new ArrayList<Node>();
 		
 		for (Node node : nodes) {
-			if (node.isRoot() || node.isParentExpend()) {	//Èç¹ûµ±Ç°½ÚµãÊÇ¸ù½Úµã»òÕßËûµÄ¸¸½Úµã´¦ÓÚÕ¹¿ª×´Ì¬¾ÍÏÔÊ¾
-				setNodeIcon(node);	//Ë¢ĞÂÍ¼±ê
+			if (node.isRoot() || node.isParentExpend()) {	//å¦‚æœå½“å‰èŠ‚ç‚¹æ˜¯æ ¹èŠ‚ç‚¹æˆ–è€…ä»–çš„çˆ¶èŠ‚ç‚¹å¤„äºå±•å¼€çŠ¶æ€å°±æ˜¾ç¤º
+				setNodeIcon(node);	//åˆ·æ–°å›¾æ ‡
 				result.add(node);
 			}
 		}
 		for (Node node : result) {
-	//		Log.e("TAG", "ÏÔÊ¾--"+node.getName());
+	//		Log.e("TAG", "æ˜¾ç¤º--"+node.getName());
 		}
 		return result;
 	}
 
 	/**
-	 * ´ÓËùÓĞ½ÚµãÖĞ»ñÈ¡¸ù½Úµã¼¯ºÏ
+	 * ä»æ‰€æœ‰èŠ‚ç‚¹ä¸­è·å–æ ¹èŠ‚ç‚¹é›†åˆ
 	 * @Title: getRootNodes
 	 * @param nodes
 	 * @return List<Node> 
@@ -204,14 +204,14 @@ public class TreeHelper {
 	}
 
 	/**
-	 * ¸ønodeÉèÖÃÍ¼Æ¬
+	 * ç»™nodeè®¾ç½®å›¾ç‰‡
 	 * @Title: setNodeIcon
 	 * @param n void 
 	 */
 	private static void setNodeIcon(Node n) {
-		if (n.getChildren().size()>0 && n.isExpend()) {			//ÓĞ×Ó½Úµã²¢ÇÒÊÇÕ¹¿ªµÄ
+		if (n.getChildren().size()>0 && n.isExpend()) {			//æœ‰å­èŠ‚ç‚¹å¹¶ä¸”æ˜¯å±•å¼€çš„
 			n.setIcon(R.drawable.item_open);
-		}else if (n.getChildren().size()>0 && !n.isExpend()) {	//ÓĞ×Ó½Úµãµ«ÊÇÎ´Õ¹¿ª
+		}else if (n.getChildren().size()>0 && !n.isExpend()) {	//æœ‰å­èŠ‚ç‚¹ä½†æ˜¯æœªå±•å¼€
 			n.setIcon(R.drawable.item_close);
 		}
 	}

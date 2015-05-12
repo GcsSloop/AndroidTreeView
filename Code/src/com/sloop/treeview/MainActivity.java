@@ -60,7 +60,7 @@ public class MainActivity extends ActionBarActivity {
 
 	
 	/**
-	 * ³õÊ¼»¯ÏìÓ¦ÊÂ¼ş
+	 * åˆå§‹åŒ–å“åº”äº‹ä»¶
 	 * @Title: initEvent void
 	 */
 	private void initEvent() {
@@ -79,10 +79,10 @@ public class MainActivity extends ActionBarActivity {
 			@Override
 			public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
 				AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-				builder.setTitle("Ìí¼Ó½Úµã");
+				builder.setTitle("æ·»åŠ èŠ‚ç‚¹");
 				final EditText et = new EditText(MainActivity.this);
 				builder.setView(et);
-				builder.setPositiveButton("È·¶¨", new OnClickListener() {
+				builder.setPositiveButton("ç¡®å®š", new OnClickListener() {
 					@Override
 					public void onClick(DialogInterface dialog, int which) {
 						String name = et.getText().toString();
@@ -92,60 +92,60 @@ public class MainActivity extends ActionBarActivity {
 						mAdapter2.addExtraNode(position, name);
 					}
 				});
-				builder.setNegativeButton("È¡Ïû", null);
+				builder.setNegativeButton("å–æ¶ˆ", null);
 				builder.show();
-				return true;	//·µ»ØÖµÎªtru±íÊ¾³¤°´ÊÂ¼ş´¥·¢ºó²»»á´¥·¢µã»÷ÊÂ¼ş
+				return true;	//è¿”å›å€¼ä¸ºtruè¡¨ç¤ºé•¿æŒ‰äº‹ä»¶è§¦å‘åä¸ä¼šè§¦å‘ç‚¹å‡»äº‹ä»¶
 			}
 		});
 	}
 	
 	/**
-	 * ³õÊ¼»¯Êı¾İ
+	 * åˆå§‹åŒ–æ•°æ®
 	 * @Title: initDatas void 
 	 */
 	private void initDatas() {
 /*		mDatas = new ArrayList<FileBean>();
 		
-		FileBean bean = new FileBean(1, 0, "¸ùÄ¿Â¼1");
+		FileBean bean = new FileBean(1, 0, "æ ¹ç›®å½•1");
 		mDatas.add(bean);
-		bean = new FileBean(2, 0, "¸ùÄ¿Â¼2");
+		bean = new FileBean(2, 0, "æ ¹ç›®å½•2");
 		mDatas.add(bean);
-		bean = new FileBean(3, 0, "¸ùÄ¿Â¼3");
+		bean = new FileBean(3, 0, "æ ¹ç›®å½•3");
 		mDatas.add(bean);
 		
-		bean = new FileBean(4, 1, "¸ùÄ¿Â¼1-1");
+		bean = new FileBean(4, 1, "æ ¹ç›®å½•1-1");
 		mDatas.add(bean);
-		bean = new FileBean(5, 1, "¸ùÄ¿Â¼1-2");
+		bean = new FileBean(5, 1, "æ ¹ç›®å½•1-2");
 		mDatas.add(bean);
 
-		bean = new FileBean(6, 5, "¸ùÄ¿Â¼1-2-1");
+		bean = new FileBean(6, 5, "æ ¹ç›®å½•1-2-1");
 		mDatas.add(bean);
 		
-		bean = new FileBean(7, 3, "¸ùÄ¿Â¼3-1");
+		bean = new FileBean(7, 3, "æ ¹ç›®å½•3-1");
 		mDatas.add(bean);
-		bean = new FileBean(8, 3, "¸ùÄ¿Â¼3-2");
+		bean = new FileBean(8, 3, "æ ¹ç›®å½•3-2");
 		mDatas.add(bean);*/
 		
 		mDatas2 = new ArrayList<OrgBean>();
 		
-		OrgBean bean = new OrgBean(1, 0, "¸ùÄ¿Â¼1");
+		OrgBean bean = new OrgBean(1, 0, "æ ¹ç›®å½•1");
 		mDatas2.add(bean);
-		bean = new OrgBean(2, 0, "¸ùÄ¿Â¼2");
+		bean = new OrgBean(2, 0, "æ ¹ç›®å½•2");
 		mDatas2.add(bean);
-		bean = new OrgBean(3, 0, "¸ùÄ¿Â¼3");
+		bean = new OrgBean(3, 0, "æ ¹ç›®å½•3");
 		mDatas2.add(bean);
 		
-		bean = new OrgBean(4, 1, "¸ùÄ¿Â¼1-1");
+		bean = new OrgBean(4, 1, "æ ¹ç›®å½•1-1");
 		mDatas2.add(bean);
-		bean = new OrgBean(5, 1, "¸ùÄ¿Â¼1-2");
+		bean = new OrgBean(5, 1, "æ ¹ç›®å½•1-2");
 		mDatas2.add(bean);
 
-		bean = new OrgBean(6, 5, "¸ùÄ¿Â¼1-2-1");
+		bean = new OrgBean(6, 5, "æ ¹ç›®å½•1-2-1");
 		mDatas2.add(bean);
 		
-		bean = new OrgBean(7, 3, "¸ùÄ¿Â¼3-1");
+		bean = new OrgBean(7, 3, "æ ¹ç›®å½•3-1");
 		mDatas2.add(bean);
-		bean = new OrgBean(8, 3, "¸ùÄ¿Â¼3-2");
+		bean = new OrgBean(8, 3, "æ ¹ç›®å½•3-2");
 		mDatas2.add(bean);
 	}
 

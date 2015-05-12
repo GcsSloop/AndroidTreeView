@@ -1,7 +1,5 @@
 package com.sloop.treeview.bean;
 
-import android.R.integer;
-
 import com.sloop.treeview.utils.annotation.TreeNodeId;
 import com.sloop.treeview.utils.annotation.TreeNodeLabel;
 import com.sloop.treeview.utils.annotation.TreeNodePid;
@@ -11,23 +9,23 @@ import com.sloop.treeview.utils.annotation.TreeNodePid;
  * @ClassName: OrgBean
  * @Description: 
  * @author sloop
- * @date 2015Äê2ÔÂ21ÈÕ ÉÏÎç2:45:13
+ * @date 2015å¹´2æœˆ21æ—¥ ä¸Šåˆ2:45:13
  *
  */
 public class OrgBean {
 
 	/**
-	 * µ±Ç°id
+	 * å½“å‰id
 	 */
 	@TreeNodeId
 	private int id;
 	/**
-	 * ¸¸½Úµãid
+	 * çˆ¶èŠ‚ç‚¹id
 	 */
 	@TreeNodePid
 	private int pId;
 	/**
-	 * ±ê¼ÇÃû³Æ
+	 * æ ‡è®°åç§°
 	 */
 	@TreeNodeLabel
 	private String lable;

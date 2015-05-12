@@ -5,7 +5,7 @@
  * Copyright: Copyright (c) 2015
  * 
  * @author sloop
- * @date 2015Äê2ÔÂ21ÈÕ ÉÏÎç3:40:42
+ * @date 2015å¹´2æœˆ21æ—¥ ä¸Šåˆ3:40:42
  * @version V1.0
  */
 
@@ -15,55 +15,55 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Ê÷ĞÎ½á¹¹µÄ½Úµã
+ * æ ‘å½¢ç»“æ„çš„èŠ‚ç‚¹
  * 
  * @ClassName: Node
  * @author sloop
- * @date 2015Äê2ÔÂ21ÈÕ ÉÏÎç3:42:26
+ * @date 2015å¹´2æœˆ21æ—¥ ä¸Šåˆ3:42:26
  */
 
 public class Node {
 
 	/**
-	 * µ±Ç°id
+	 * å½“å‰id
 	 */
 	private int id;
 	/**
-	 * ¸¸½Úµãid ¸ù½ÚµãµÄpid=0
+	 * çˆ¶èŠ‚ç‚¹id æ ¹èŠ‚ç‚¹çš„pid=0
 	 */
 	private int pId;
 	/**
-	 * ÏÔÊ¾Ãû³Æ
+	 * æ˜¾ç¤ºåç§°
 	 */
 	private String name;
 	/**
-	 * Ê÷µÄ²ã¼¶
+	 * æ ‘çš„å±‚çº§
 	 */
 	private int level;
 	/**
-	 * ÊÇ·ñÕ¹¿ª
+	 * æ˜¯å¦å±•å¼€
 	 */
 	private boolean isExpend = false;
 	/**
-	 * Í¼±ê
+	 * å›¾æ ‡
 	 */
 	private int icon;
 	/**
-	 * ¸¸½Úµã
+	 * çˆ¶èŠ‚ç‚¹
 	 */
 	private Node parent;
 	/**
-	 * ×Ó½Úµã
+	 * å­èŠ‚ç‚¹
 	 */
 	private List<Node> children = new ArrayList<Node>();
 
 	/**
 	 * 
-	 * ´´½¨Ò»¸öĞÂµÄÊµÀı Node.
+	 * åˆ›å»ºä¸€ä¸ªæ–°çš„å®ä¾‹ Node.
 	 * 
-	 * @param id µ±Ç°½Úµãid
-	 * @param pId ¸¸½Úµãid
-	 * @param name ÏÔÊ¾Ãû³Æ
+	 * @param id å½“å‰èŠ‚ç‚¹id
+	 * @param pId çˆ¶èŠ‚ç‚¹id
+	 * @param name æ˜¾ç¤ºåç§°
 	 */
 	public Node(int id, int pId, String name) {
 		this.id = id;
@@ -96,7 +96,7 @@ public class Node {
 	}
 
 	/**
-	 * µÃµ½µ±Ç°½ÚµãµÄ²ã¼¶
+	 * å¾—åˆ°å½“å‰èŠ‚ç‚¹çš„å±‚çº§
 	 * 
 	 * @Title: getLevel
 	 * @return int
@@ -114,14 +114,14 @@ public class Node {
 	}
 
 	/**
-	 * ¸Ä±äÕ¹¿ª×´Ì¬
+	 * æ”¹å˜å±•å¼€çŠ¶æ€
 	 * 
 	 * @Title: setExpend
 	 * @param isExpend void
 	 */
 	public void setExpend(boolean isExpend) {
 		this.isExpend = isExpend;
-		if (!isExpend) { // ÊÕËõ×Ó½Úµã
+		if (!isExpend) { // æ”¶ç¼©å­èŠ‚ç‚¹
 			for (Node node : children) {
 				node.setExpend(false);
 			}
@@ -153,7 +153,7 @@ public class Node {
 	}
 
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÊÇ¸ù½Úµã
+	 * åˆ¤æ–­æ˜¯å¦æ˜¯æ ¹èŠ‚ç‚¹
 	 * 
 	 * @Title: isRoot
 	 * @return boolean
@@ -163,7 +163,7 @@ public class Node {
 	}
 
 	/**
-	 * ÅĞ¶Ï¸¸½ÚµãÊÇ·ñ´¦ÓÚÕ¹¿ª×´Ì¬
+	 * åˆ¤æ–­çˆ¶èŠ‚ç‚¹æ˜¯å¦å¤„äºå±•å¼€çŠ¶æ€
 	 * 
 	 * @Title: isParentExpend
 	 * @return boolean
@@ -175,7 +175,7 @@ public class Node {
 	}
 
 	/**
-	 * ÅĞ¶ÏÊÇ·ñÊÇÒ¶×Ó½Úµã
+	 * åˆ¤æ–­æ˜¯å¦æ˜¯å¶å­èŠ‚ç‚¹
 	 * 
 	 * @Title: isLeaf
 	 * @return boolean

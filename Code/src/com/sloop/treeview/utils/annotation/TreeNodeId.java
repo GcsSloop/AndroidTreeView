@@ -4,7 +4,7 @@
  * Copyright: Copyright (c) 2015
  * 
  * @author sloop
- * @date 2015Äê2ÔÂ21ÈÕ ÉÏÎç4:23:26
+ * @date 2015å¹´2æœˆ21æ—¥ ä¸Šåˆ4:23:26
  * @version V1.0
  */
 
@@ -18,7 +18,7 @@ import java.lang.annotation.Target;
 /**
  * @ClassName: TreeNodeId
  * @author sloop
- * @date 2015Äê2ÔÂ21ÈÕ ÉÏÎç4:23:26
+ * @date 2015å¹´2æœˆ21æ—¥ ä¸Šåˆ4:23:26
  */
 
 @Target(ElementType.FIELD)

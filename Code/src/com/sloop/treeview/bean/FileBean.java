@@ -1,7 +1,5 @@
 package com.sloop.treeview.bean;
 
-import android.R.integer;
-
 import com.sloop.treeview.utils.annotation.TreeNodeId;
 import com.sloop.treeview.utils.annotation.TreeNodeLabel;
 import com.sloop.treeview.utils.annotation.TreeNodePid;
@@ -9,17 +7,17 @@ import com.sloop.treeview.utils.annotation.TreeNodePid;
 public class FileBean {
 
 	/**
-	 * 当前id
+	 * 褰撳墠id
 	 */
 	@TreeNodeId/*(type = integer.class)*/
 	private int id;
 	/**
-	 * 父节点id
+	 * 鐖惰妭鐐筰d
 	 */
 	@TreeNodePid
 	private int pId;
 	/**
-	 * 标记名称
+	 * 鏍囪鍚嶇О
 	 */
 	@TreeNodeLabel
 	private String lable;

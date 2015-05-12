@@ -4,7 +4,7 @@
  * Copyright: Copyright (c) 2015
  * 
  * @author sloop
- * @date 2015Äê2ÔÂ22ÈÕ ÉÏÎç2:01:06
+ * @date 2015å¹´2æœˆ22æ—¥ ä¸Šåˆ2:01:06
  * @version V1.0
  */
 
@@ -28,13 +28,13 @@ import com.sloop.treeview.utils.adapter.TreeListViewAdapter;
 /**
  * @ClassName: SimpleTreeListViewAdapter
  * @author sloop
- * @date 2015Äê2ÔÂ22ÈÕ ÉÏÎç2:01:06
+ * @date 2015å¹´2æœˆ22æ—¥ ä¸Šåˆ2:01:06
  */
 
 public class SimpleTreeListViewAdapter<T> extends TreeListViewAdapter<T> {
 
 	/**
-	 * ´´½¨Ò»¸öĞÂµÄÊµÀı SimpleTreeListViewAdapter. 
+	 * åˆ›å»ºä¸€ä¸ªæ–°çš„å®ä¾‹ SimpleTreeListViewAdapter. 
 	 * @param context
 	 * @param tree
 	 * @param datas
@@ -61,7 +61,7 @@ public class SimpleTreeListViewAdapter<T> extends TreeListViewAdapter<T> {
 		
 		ViewHolder holder = null;
 		if (convertView==null) {
-			//ÉèÖÃfalse·µ»ØµÄÊÇµ¥¸ölistview true·µ»ØµÄÊÇ°üº¬¸¸viewµÄviewgroup
+			//è®¾ç½®falseè¿”å›çš„æ˜¯å•ä¸ªlistview trueè¿”å›çš„æ˜¯åŒ…å«çˆ¶viewçš„viewgroup
 			convertView = mInflater.inflate(R.layout.list_item, parent, false);
 			holder = new ViewHolder();
 			holder.mIcon = (ImageView) convertView.findViewById(R.id.item_icon);
@@ -87,7 +87,7 @@ public class SimpleTreeListViewAdapter<T> extends TreeListViewAdapter<T> {
 	}
 
 	/**
-	 * ¶¯Ì¬²åÈë½Úµã
+	 * åŠ¨æ€æ’å…¥èŠ‚ç‚¹
 	 * @Title: addExtraNode
 	 * @param position
 	 * @param trim void 
@@ -99,7 +99,7 @@ public class SimpleTreeListViewAdapter<T> extends TreeListViewAdapter<T> {
 		exteaNode.setParent(node);
 		node.getChildren().add(exteaNode);
 		mAllNodes.add(index+1, exteaNode);
-		//×¢ÒâÊı¾İµÄ´æ´¢
+		//æ³¨æ„æ•°æ®çš„å­˜å‚¨
 		mVisibleNodes = TreeHelper.fliterVisibleNodes(mAllNodes);
 		notifyDataSetChanged();
 	}

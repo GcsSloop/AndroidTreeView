@@ -4,7 +4,7 @@
  * Copyright: Copyright (c) 2015
  * 
  * @author sloop
- * @date 2015Äê2ÔÂ22ÈÕ ÉÏÎç1:16:25
+ * @date 2015å¹´2æœˆ22æ—¥ ä¸Šåˆ1:16:25
  * @version V1.0
  */
 
@@ -28,24 +28,24 @@ import com.sloop.treeview.utils.TreeHelper;
 /**
  * @ClassName: TreeListViewAdapter
  * @author sloop
- * @date 2015Äê2ÔÂ22ÈÕ ÉÏÎç1:16:25
+ * @date 2015å¹´2æœˆ22æ—¥ ä¸Šåˆ1:16:25
  */
 
 public abstract class TreeListViewAdapter<T> extends BaseAdapter {
 
-	protected Context mContext;				//ÉÏÏÂÎÄ
-	protected List<Node> mAllNodes;			//ËùÓĞ½Úµã
-	protected List<Node> mVisibleNodes;		//ÏÔÊ¾µÄ½Úµã
-	protected LayoutInflater mInflater;		//Ò³ÃæÌî³äÆ÷
-	protected ListView mTree;					//Õ¹Ê¾ÓÃµÄListView
+	protected Context mContext;				//ä¸Šä¸‹æ–‡
+	protected List<Node> mAllNodes;			//æ‰€æœ‰èŠ‚ç‚¹
+	protected List<Node> mVisibleNodes;		//æ˜¾ç¤ºçš„èŠ‚ç‚¹
+	protected LayoutInflater mInflater;		//é¡µé¢å¡«å……å™¨
+	protected ListView mTree;					//å±•ç¤ºç”¨çš„ListView
 	
 	/**
-	 * ÉèÖÃÓÃ»§nodeµÄµã»÷»Øµ÷
-	 * ¸øÓÃ»§Ìá¹©µÄÌõÄ¿µã»÷ÏìÓ¦
-	 * ÓÃÓÚÃÖ²¹OnItemClickListener±»Õ¼ÓÃµÄ²»×ã
+	 * è®¾ç½®ç”¨æˆ·nodeçš„ç‚¹å‡»å›è°ƒ
+	 * ç»™ç”¨æˆ·æä¾›çš„æ¡ç›®ç‚¹å‡»å“åº”
+	 * ç”¨äºå¼¥è¡¥OnItemClickListenerè¢«å ç”¨çš„ä¸è¶³
 	 * @ClassName: OnTreeNodeClickListener
 	 * @author sloop
-	 * @date 2015Äê2ÔÂ22ÈÕ ÉÏÎç1:44:19
+	 * @date 2015å¹´2æœˆ22æ—¥ ä¸Šåˆ1:44:19
 	 */
 	public interface OnTreeNodeClickListener{
 		void onClick(Node node, int position);
@@ -58,11 +58,11 @@ public abstract class TreeListViewAdapter<T> extends BaseAdapter {
 	}
 	
 	/**
-	 * ´´½¨Ò»¸öĞÂµÄÊµÀı TreeListViewAdapter. 
-	 * @param context			ÉÏÏÂÎÄ
-	 * @param mTree				Õ¹Ê¾ÓÃµÄListView
-	 * @param datas				Êı¾İ¼¯
-	 * @param defaultLevel		Ä¬ÈÏÕ¹¿ª²ã¼¶
+	 * åˆ›å»ºä¸€ä¸ªæ–°çš„å®ä¾‹ TreeListViewAdapter. 
+	 * @param context			ä¸Šä¸‹æ–‡
+	 * @param mTree				å±•ç¤ºç”¨çš„ListView
+	 * @param datas				æ•°æ®é›†
+	 * @param defaultLevel		é»˜è®¤å±•å¼€å±‚çº§
 	 * @throws IllegalArgumentException 
 	 * @throws IllegalAccessException 
 	 */
@@ -72,7 +72,7 @@ public abstract class TreeListViewAdapter<T> extends BaseAdapter {
 		mAllNodes = TreeHelper.getSortedNodes(datas, defaultExpandLevel);
 		mVisibleNodes = TreeHelper.fliterVisibleNodes(mAllNodes);
 		for (Node node : mVisibleNodes) {
-			Log.e("TAG", "ÏÔÊ¾--"+node.getName());
+			Log.e("TAG", "æ˜¾ç¤º--"+node.getName());
 		}
 		mTree = tree;
 		
@@ -90,7 +90,7 @@ public abstract class TreeListViewAdapter<T> extends BaseAdapter {
 	}
 	
 	/**
-	 * µã»÷ÊÕËõ»òÕßÕ¹¿ª
+	 * ç‚¹å‡»æ”¶ç¼©æˆ–è€…å±•å¼€
 	 * @Title: expandOrCollapse
 	 * @param position 
 	 */
@@ -102,7 +102,7 @@ public abstract class TreeListViewAdapter<T> extends BaseAdapter {
 			}
 			node.setExpend(!node.isExpend());
 			mVisibleNodes = TreeHelper.fliterVisibleNodes(mAllNodes);
-			notifyDataSetChanged();	//Ë¢ĞÂ
+			notifyDataSetChanged();	//åˆ·æ–°
 		}
 	}
 	
@@ -151,12 +151,12 @@ public abstract class TreeListViewAdapter<T> extends BaseAdapter {
 	public View getView(int position, View convertView, ViewGroup parent) {
 		Node node = mVisibleNodes.get(position);
 		convertView = getConvertView(node, position, convertView, parent);
-		convertView.setPadding(node.getLevel()*30, 3, 3, 3);	//ÉèÖÃpaddingÄÚ±ß¾à
+		convertView.setPadding(node.getLevel()*30, 3, 3, 3);	//è®¾ç½®paddingå†…è¾¹è·
 		return convertView;
 	}
 
 	/**
-	 * Ìá¹©¸øÓÃ»§µÄ×Ô¶¨ÒåÌõÄ¿µÄ·½Ê½
+	 * æä¾›ç»™ç”¨æˆ·çš„è‡ªå®šä¹‰æ¡ç›®çš„æ–¹å¼
 	 * @Title: getConvertView
 	 * @param node
 	 * @param position
