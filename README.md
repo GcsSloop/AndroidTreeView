@@ -1,4 +1,3 @@
-# AndroidTreeView
 #Android任意层级树形菜单
 #免费视频课程传送门 [【点击传送】](http://www.imooc.com/view/303)
 作者微博：  [@安卓攻城师sloop](http://weibo.com/5459430586/profile?topnav=1&wvr=6)
