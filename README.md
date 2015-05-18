@@ -29,5 +29,4 @@
 
 截屏预览：
 ----------
-![image](https://coding.net/u/sloop/p/TreeView/git/raw/master/pic/pic1.png)
-![image](https://coding.net/u/sloop/p/TreeView/git/raw/master/pic/pic2.png)
+![image](https://github.com/GcsSloop/AndroidTreeView/blob/master/Pic/Screenshot_1.png) ![image](https://github.com/GcsSloop/AndroidTreeView/blob/master/Pic/Screenshot_2.png)
