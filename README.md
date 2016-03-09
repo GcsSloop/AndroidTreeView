@@ -31,8 +31,8 @@
 ----------
 ![image](https://github.com/GcsSloop/AndroidTreeView/blob/master/Pic/Screenshot_1.png) ![image](https://github.com/GcsSloop/AndroidTreeView/blob/master/Pic/Screenshot_2.png)
 
-## 我的相关链接
 
-<a href="http://www.jianshu.com/users/bc2fa21dbd1e/latest_articles"> <img src="http://ww3.sinaimg.cn/large/005Xtdi2gw1f1pyg6uniyj303k03ka9x.jpg" width=72 height=72 /></a> | <a href="http://weibo.com/GcsSloop"> <img src="http://ww1.sinaimg.cn/large/005Xtdi2gw1f1py7pa9tsj303k03kwee.jpg" width=72 height=72 /></a> | <a href="http://blog.csdn.net/u013831257?viewmode=list"> <img src="http://ww1.sinaimg.cn/large/005Xtdi2gw1f1pycmbgn0j303k03kjr8.jpg" width=72 height=72 /></a> | <a href="https://github.com/GcsSloop"> <img src="http://ww2.sinaimg.cn/large/005Xtdi2gw1f1pyjf8vx7j303k03kglh.jpg" width=72 height=72 /></a> | <a href="http://gold.xitu.io/#/user/56dd579a75c4cd4365aca918"> <img src="http://ww1.sinaimg.cn/large/005Xtdi2gw1f1pyo2hyqgj303k03kmx1.jpg" width=72 height=72 /></a> | <a href="https://www.zhihu.com/people/li-yu-long-38"> <img src="http://ww4.sinaimg.cn/large/005Xtdi2gw1f1pyqdjk92j303k03k747.jpg" width=72 height=72 /></a> 
-:---:|:---:|:---:|:---:|:---:|:---:
-**[简 书](http://www.jianshu.com/users/bc2fa21dbd1e/latest_articles)** | **[微 博](http://weibo.com/GcsSloop)** | **[CSDN](http://blog.csdn.net/u013831257?viewmode=list)** | **[GitHub](https://github.com/GcsSloop)** | **[掘 金](http://gold.xitu.io/#/user/56dd579a75c4cd4365aca918)** | **[知 乎](https://www.zhihu.com/people/li-yu-long-38)**
+## About
+
+<a href="https://github.com/GcsSloop/SloopBlog/blob/master/FINDME.md" target="_blank"> <img src="http://ww2.sinaimg.cn/large/005Xtdi2jw1f1qkdff464j315o0dwtdm.jpg" width=300 height=100 /> </a>
+
